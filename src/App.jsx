@@ -1,5 +1,12 @@
 import './App.css'
 import ThreeScene from "./ThreeScene";
+import profilePhoto from "./assets/portfolio/profile-photo.jpg";
+import fashionIllustration from "./assets/portfolio/fashion-illustration.jpg";
+import eyeStudy1 from "./assets/portfolio/eye-study-1.jpg";
+import eyeStudy2 from "./assets/portfolio/eye-study-2.jpg";
+import tigerPainting from "./assets/portfolio/tiger-oil-painting.jpg";
+import portraitStudy1 from "./assets/portfolio/portrait-study-1.jpg";
+import portraitStudy2 from "./assets/portfolio/portrait-study-2.jpg";
 function App() {
   return (
     <div className="portfolio">
@@ -34,32 +41,43 @@ function App() {
         </div>
 
         <div className="hero-image">
-          <div className="hero-image">
-  <ThreeScene />
+     <div className="hero-image">
+  <img
+    src={fashionIllustration}
+    alt="Fashion Illustration"
+    className="hero-fashion-image"
+  />
 </div>
         </div>
       </section>
+{/* ABOUT */}
+<section className="section" id="about">
+  <div className="section-heading">
+    <h2>About Me</h2>
+    <p>
+      A little introduction about my journey,
+      interests and passions.
+    </p>
+  </div>
 
-      {/* ABOUT */}
-      <section className="section" id="about">
-        <div className="section-heading">
-          <h2>About Me</h2>
-          <p>
-            A little introduction about my journey,
-            interests and passions.
-          </p>
-        </div>
+  <div className="about-profile-layout">
+    <img
+      src={profilePhoto}
+      alt="My profile"
+      className="about-profile-photo"
+    />
 
-        <div className="about-content">
-          <p>
-            I am an IT student and Software Engineering
-            undergraduate with an interest in technology,
-            software development and creative design.
-            Alongside my technical journey, I enjoy creating
-            pencil portraits and exploring different forms of art.
-          </p>
-        </div>
-      </section>
+    <div className="about-content">
+      <p>
+        I am an IT student and Software Engineering
+        undergraduate with an interest in technology,
+        software development and creative design.
+        Alongside my technical journey, I enjoy creating
+        pencil portraits and exploring different forms of art.
+      </p>
+    </div>
+  </div>
+</section>
 
       {/* EDUCATION */}
       <section className="section" id="education">
@@ -193,51 +211,42 @@ function App() {
         </div>
       </section>
 
-      {/* ART GALLERY */}
-      <section className="section" id="artworks">
-        <div className="section-heading">
-          <h2>My Artworks</h2>
-          <p>
-            I enjoy creating realistic portraits,
-            pencil drawings and unique creative designs.
-          </p>
-        </div>
+     {/* ART GALLERY */}
+<section className="section" id="artworks">
+  <div className="section-heading">
+    <h2>My Artworks</h2>
+    <p>
+      I enjoy creating realistic portraits,
+      pencil drawings and unique creative designs.
+    </p>
+  </div>
 
-        <div className="gallery-grid">
-          <div className="gallery-placeholder">Artwork 01</div>
-          <div className="gallery-placeholder">Artwork 02</div>
-          <div className="gallery-placeholder">Artwork 03</div>
-          <div className="gallery-placeholder">Artwork 04</div>
-          <div className="gallery-placeholder">Artwork 05</div>
-          <div className="gallery-placeholder">Artwork 06</div>
-        </div>
-      </section>
+  <div className="gallery-grid">
+    <div className="gallery-item">
+      <img src={fashionIllustration} alt="Fashion Illustration" />
+    </div>
 
-      {/* DESIGNS & COMMISSIONS */}
-      <section className="section" id="commissions">
-        <div className="section-heading">
-          <h2>Designs & Commissions</h2>
-          <p>Creative work and custom artwork services</p>
-        </div>
+    <div className="gallery-item">
+      <img src={eyeStudy1} alt="Eye Drawing 1" />
+    </div>
 
-        <div className="info-grid">
-          <div className="info-card">
-            <h3>Creative Designs</h3>
-            <p>
-              Exploring creative ideas through visual
-              design and artistic expression.
-            </p>
-          </div>
+    <div className="gallery-item">
+      <img src={eyeStudy2} alt="Eye Drawing 2" />
+    </div>
 
-          <div className="info-card">
-            <h3>Custom Commissions</h3>
-            <p>
-              Personalized portrait artwork created
-              based on individual requests.
-            </p>
-          </div>
-        </div>
-      </section>
+    <div className="gallery-item">
+      <img src={tigerPainting} alt="Tiger Oil Painting" />
+    </div>
+
+    <div className="gallery-item">
+      <img src={portraitStudy1} alt="Portrait Drawing 1" />
+    </div>
+
+    <div className="gallery-item">
+      <img src={portraitStudy2} alt="Portrait Drawing 2" />
+    </div>
+  </div>
+</section>
 
       {/* CONTACT */}
       <section className="section contact-section" id="contact">
